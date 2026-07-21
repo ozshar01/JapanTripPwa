@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מסלול יפן 2026 🇯🇵</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --primary: #2b5797;
+            --accent: #ff6b6b;
+            --text-color: #333333;
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 15px;
+            direction: rtl;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .day-selector {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .day-btn {
+            background: #e0e0e0;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .day-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 18px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .step-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 3px;
+        }
+
+        .nav-btn {
+            display: inline-block;
+            background: #34a853;
+            color: white;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .badge-orange {
+            background-color: #ff9800;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .day-content { display: none; }
+        .day-content.active { display: block; }
+    </style>
+</head>
+<body>
+
+    <header>
+        ⛩️ יפן 2026 - עוזר הטיול האישי
+    </header>
+
+    <!-- תפריט בחירת ימים -->
+    <div class="day-selector">
+        <button class="day-btn active" onclick="showDay(1)">יום 1</button>
+        <button class="day-btn" onclick="showDay(2)">יום 2</button>
+        <button class="day-btn" onclick="showDay(17)">יום 17</button>
+    </div>
+
+    <!-- תוכן יום 1 -->
+    <div id="day-1" class="day-content active">
+        <div class="card">
+            <h3>🛬 ערב - נחיתה ונסיעה למלון</h3>
+            <div class="step-item">
+                <input type="checkbox" id="d1-s1">
+                <label for="d1-s1">
+                    <b>19:40 - נחיתה בנריטה (NRT)</b><br>
+                    מעבר דרכונים, מכס ואיסוף מזוודות.
+                </label>
+            </div>
+            <div class="step-item">
+                <input type="checkbox" id="d1-s2">
+                <label for="d1-s2">
+                    <b>עלייה לרכבת Keisei Access Express</b> <span class="badge-orange">כתום</span><br>
+                    לחפש שילוט Keisei כתום לכיוון <i>Haneda Airport / Nishi-Magome</i>.<br>
+                    נסיעה ישירה של 75 דקות לתחנת <b>Shimbashi</b>.
+                    <br>
+                    <a href="https://maps.google.com/?q=Shimbashi+Station" target="_blank" class="nav-btn">📍 ניווט לתחנת Shimbashi</a>
+                </label>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🏨 לילה - הגעה למלון ואוכל</h3>
+            <div class="step-item">
+                <input type="checkbox" id="d1-s3">
+                <label for="d1-s3">
+                    <b>הגעה למלון Villa Fontaine Grand</b><br>
+                    ירידה בתחנת Shimbashi, מעבר תת-קרקעי רחב לכיוון Shiodome ישירות ללובי.<br>
+                    <a href="https://maps.google.com/?q=Hotel+Villa+Fontaine+Grand+Tokyo-Shiodome" target="_blank" class="nav-btn">📍 ניווט למלון</a>
+                </label>
+            </div>
+            <div class="step-item">
+                <input type="checkbox" id="d1-s4">
+                <label for="d1-s4">
+                    <b>ארוחת ערב קלילה</b><br>
+                    סגירת פינה ב-7-Eleven סמוך או רשת סושי מקומית ושינה.
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- תוכן יום 2 -->
+    <div id="day-2" class="day-content">
+        <div class="card">
+            <h3>🏙️ יום 2: שיבויה והראג'וקו</h3>
+            <p>תוכן יום 2 יופיע כאן...</p>
+        </div>
+    </div>
+
+    <!-- תוכן יום 17 -->
+    <div id="day-17" class="day-content">
+        <div class="card">
+            <h3>⚔️ יום 17: סמוראים, גאדג'טים ואורות ניאון</h3>
+            <div class="step-item">
+                <input type="checkbox" id="d17-s1">
+                <label for="d17-s1">
+                    <b>10:00 - Samurai Sword Experience</b><br>
+                    סיור מוזיאון וחוויית חיתוך בחרב בשינג'וקו.<br>
+                    <a href="https://maps.google.com/?q=Shinjuku+Station" target="_blank" class="nav-btn">📍 ניווט לשינג'וקו</a>
+                </label>
+            </div>
+            <div class="step-item">
+                <input type="checkbox" id="d17-s2">
+                <label for="d17-s2">
+                    <b>צהריים - פסל הגודזילה ואקשן</b><br>
+                    סיבוב בקבוקיצ'ו, צילום גודזילה וכניסה ל-Ninja Trick House.
+                </label>
+            </div>
+            <div class="step-item">
+                <input type="checkbox" id="d17-s3">
+                <label for="d17-s3">
+                    <b>ערב - תצפית עירייה וחתול 3D</b><br>
+                    תצפית לילה בחינם מבניין עיריית טוקיו וסיבוב אורות ניאון.
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // מעבר בין ימים
+        function showDay(dayNum) {
+            document.querySelectorAll('.day-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.day-btn').forEach(el => el.classList.remove('active'));
+            
+            const targetDay = document.getElementById(`day-${dayNum}`);
+            if(targetDay) targetDay.classList.add('active');
+            
+            event.target.classList.add('active');
+        }
+
+        // שמירת מצב הצ'ק-בוקסים בזיכרון המכשיר (localStorage)
+        document.querySelectorAll('input[type="checkbox"]').forEach(box => {
+            const savedState = localStorage.getItem(box.id);
+            if (savedState === 'true') box.checked = true;
+
+            box.addEventListener('change', (e) => {
+                localStorage.setItem(e.target.id, e.target.checked);
+            });
+        });
+    </script>
+</body>
+</html>
