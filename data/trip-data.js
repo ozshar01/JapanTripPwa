@@ -1,5 +1,5 @@
 window.TRIP_DATA = {
-  "version": "2026-07-22 10:15",
+  "version": "2026-07-22 10:22",
   "settings": {
     "שם הטיול": "יפן 2026",
     "תאריך התחלה": "2026-09-20",
@@ -1564,22 +1564,106 @@ window.TRIP_DATA = {
   ],
   "phrases": [
     {
-      "category": "אוכל",
+      "category": "אוכל וקניות",
       "he": "איננו אוכלים חזיר, ציר עצמות חזיר או שומן חזיר",
       "ja": "豚肉、豚骨スープ、ラードは食べられません。",
       "roman": "Buta-niku, tonkotsu soup, rādo wa taberaremasen."
     },
     {
-      "category": "אוכל",
+      "category": "אוכל וקניות",
       "he": "נא לא להשתמש בסאקה לבישול או במירין",
       "ja": "料理酒とみりんも使わないでください。",
       "roman": "Ryōrishu to mirin mo tsukawanaide kudasai."
     },
     {
-      "category": "אוכל",
+      "category": "אוכל וקניות",
       "he": "האם זה חלאל?",
       "ja": "これはハラールですか？",
       "roman": "Kore wa harāru desu ka?"
+    },
+    {
+      "category": "אוכל וקניות",
+      "he": "אני לא אוכל חזיר",
+      "ja": "私は豚肉食べません",
+      "roman": "Watashi wa butaniku tabemasen"
+    },
+    {
+      "category": "אוכל וקניות",
+      "he": "כמה זה עולה?",
+      "ja": "これいくらですか？",
+      "roman": "Kore ikura desu ka?"
+    },
+    {
+      "category": "אוכל וקניות",
+      "he": "על מה אתה ממליץ?",
+      "ja": "おすすめは何ですか？",
+      "roman": "Osusume wa nan desu ka?"
+    },
+    {
+      "category": "אוכל וקניות",
+      "he": "את זה בבקשה",
+      "ja": "これをください",
+      "roman": "Kore onegai shimasu"
+    },
+    {
+      "category": "אוכל וקניות",
+      "he": "אפשר לשלם באשראי?",
+      "ja": "カード使えますか？",
+      "roman": "Kaado tsukaemasu ka?"
+    },
+    {
+      "category": "אוכל וקניות",
+      "he": "זה בסדר / לא צריך (מעולה לסירוב לשקית)",
+      "ja": "大丈夫です",
+      "roman": "Daijoubu desu"
+    },
+    {
+      "category": "אוכל וקניות",
+      "he": "בלי [רכיב] בבקשה (מעולה להסרת ירקות/מרכיבים)",
+      "ja": "抜きでお願いします",
+      "roman": "... nuki de onegai shimasu"
+    },
+    {
+      "category": "מלון",
+      "he": "אפשר להשאיר את המזוודות?",
+      "ja": "荷物を預けてもいいですか？",
+      "roman": "Nimotsu o azukete mo ii desu ka?"
+    },
+    {
+      "category": "נימוסים ובסיס",
+      "he": "סליחה / תסלח לי / מלצר",
+      "ja": "すみません",
+      "roman": "Sumimasen"
+    },
+    {
+      "category": "נימוסים ובסיס",
+      "he": "תודה רבה",
+      "ja": "ありがとうございます",
+      "roman": "Arigatou gozaimasu"
+    },
+    {
+      "category": "נימוסים ובסיס",
+      "he": "בבקשה / תתכבד",
+      "ja": "どうぞ",
+      "roman": "Douzo"
+    },
+    {
+      "category": "נימוסים ובסיס",
+      "he": "מה שלומך?",
+      "ja": "元気ですか？",
+      "roman": "Genki desu ka?"
+    },
+    {
+      "category": "נימוסים ובסיס",
+      "he": "אני לא מבין",
+      "ja": "分かりません",
+      "roman": "Wakarimasen"
+    },
+    {
+      "category": "נימוסים ובסיס",
+      "he": "בבקשה (לבקשת שירות או פריט)",
+      "ja": "お願いします",
+      "roman": "Onegai shimasu"
     },
     {
       "category": "תחבורה",
@@ -1588,10 +1672,40 @@ window.TRIP_DATA = {
       "roman": "Kono hōmu wa doko desu ka?"
     },
     {
-      "category": "מלון",
-      "he": "אפשר להשאיר את המזוודות?",
-      "ja": "荷物を預けてもいいですか？",
-      "roman": "Nimotsu o azukete mo ii desu ka?"
+      "category": "תחבורה",
+      "he": "האם זו התחנה?",
+      "ja": "駅ですか？",
+      "roman": "Eki desu ka?"
+    },
+    {
+      "category": "תחבורה",
+      "he": "זה פה? / האם הגעתי למקום הנכון?",
+      "ja": "ここですか？",
+      "roman": "Koko desu ka?"
+    },
+    {
+      "category": "תקשורת והסתדרות",
+      "he": "האם אתה מדבר אנגלית?",
+      "ja": "英語話せますか？",
+      "roman": "Eigo ga hanasemasu ka?"
+    },
+    {
+      "category": "תקשורת והסתדרות",
+      "he": "עוד פעם אחת בבקשה",
+      "ja": "もう一度お願いします",
+      "roman": "Mou ichido onegai shimasu"
+    },
+    {
+      "category": "תקשורת והסתדרות",
+      "he": "איפה השירותים?",
+      "ja": "トイレはどこですか？",
+      "roman": "Toire wa doko desu ka?"
+    },
+    {
+      "category": "תקשורת והסתדרות",
+      "he": "מפה",
+      "ja": "地図",
+      "roman": "Chizu"
     }
   ]
 };
