@@ -1,5 +1,5 @@
 {
-  "version": "2026-07-22 10:22",
+  "version": "2026-07-22 20:44",
   "settings": {
     "שם הטיול": "יפן 2026",
     "תאריך התחלה": "2026-09-20",
@@ -465,31 +465,31 @@
       "internet": true
     },
     {
-      "id": "day-02-e03",
+      "id": "day-02-e04",
       "dayId": "day-02",
       "order": 3,
       "start": "11:30",
-      "end": "13:30",
-      "title": "חוויית חרב וסיור במוזיאון",
-      "description": "לבוש סמוראי, תרגול חרב וסיור באנגלית",
-      "transport": "הליכה",
-      "place": "MAIKOYA",
-      "mapsQuery": "Samurai Museum Shinjuku MAIKOYA",
-      "bookingId": "samurai",
-      "internet": true
-    },
-    {
-      "id": "day-02-e04",
-      "dayId": "day-02",
-      "order": 4,
-      "start": "15:00",
-      "end": "16:30",
+      "end": "13:00",
       "title": "Shinjuku Gyoen",
       "description": "הליכה רגועה בגן",
       "transport": "הליכה",
       "place": "",
       "mapsQuery": "Shinjuku Gyoen",
       "bookingId": "",
+      "internet": true
+    },
+    {
+      "id": "day-02-e03",
+      "dayId": "day-02",
+      "order": 4,
+      "start": "13:15",
+      "end": "15:30",
+      "title": "חוויית חרב וסיור במוזיאון",
+      "description": "לבוש סמוראי, תרגול חרב וסיור באנגלית",
+      "transport": "הליכה",
+      "place": "MAIKOYA",
+      "mapsQuery": "Samurai Museum Shinjuku MAIKOYA",
+      "bookingId": "samurai",
       "internet": true
     },
     {
@@ -524,6 +524,20 @@
       "id": "day-03-e02",
       "dayId": "day-03",
       "order": 2,
+      "start": "10:20",
+      "end": "11:20",
+      "title": "מעבר ל teamLab",
+      "description": "מטרו ל teamLab",
+      "transport": "מטרו",
+      "place": "",
+      "mapsQuery": "teamLab Planets Tokyo",
+      "bookingId": "",
+      "internet": true
+    },
+    {
+      "id": "day-03-e02",
+      "dayId": "day-03",
+      "order": 3,
       "start": "15:30",
       "end": "17:15",
       "title": "teamLab Planets",
@@ -537,7 +551,7 @@
     {
       "id": "day-03-e03",
       "dayId": "day-03",
-      "order": 3,
+      "order": 4,
       "start": "17:30",
       "end": "20:15",
       "title": "אודאיבה",
@@ -608,6 +622,20 @@
       "id": "day-05-e01",
       "dayId": "day-05",
       "order": 1,
+      "start": "07:00",
+      "end": "08:20",
+      "title": "יציאה מהמלון ונסיעה לשינג׳וקו",
+      "description": "Oedo Line משיאודומה לשינג׳וקו. להקצות 25 דקות למעבר אל רציפי Odakyu.",
+      "transport": "רכבת",
+      "place": "",
+      "mapsQuery": "Odakyu Shinjuku Station",
+      "bookingId": "",
+      "internet": true
+    },
+    {
+      "id": "day-05-e01",
+      "dayId": "day-05",
+      "order": 2,
       "start": "08:30",
       "end": "09:55",
       "title": "Romancecar לאודווארה",
@@ -621,7 +649,7 @@
     {
       "id": "day-05-e02",
       "dayId": "day-05",
-      "order": 2,
+      "order": 3,
       "start": "10:00",
       "end": "10:40",
       "title": "איסוף רכב",
@@ -635,7 +663,7 @@
     {
       "id": "day-05-e03",
       "dayId": "day-05",
-      "order": 3,
+      "order": 4,
       "start": "11:40",
       "end": "13:00",
       "title": "Hakone Shrine",
@@ -649,7 +677,7 @@
     {
       "id": "day-05-e04",
       "dayId": "day-05",
-      "order": 4,
+      "order": 5,
       "start": "13:20",
       "end": "17:00",
       "title": "שייט ורכבל",
