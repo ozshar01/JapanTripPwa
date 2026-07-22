@@ -1,5 +1,5 @@
 {
-  "version": "2026-07-22 20:44",
+  "version": "2026-07-22 20:53",
   "settings": {
     "שם הטיול": "יפן 2026",
     "תאריך התחלה": "2026-09-20",
@@ -465,7 +465,7 @@
       "internet": true
     },
     {
-      "id": "day-02-e04",
+      "id": "day-02-e03",
       "dayId": "day-02",
       "order": 3,
       "start": "11:30",
@@ -479,7 +479,7 @@
       "internet": true
     },
     {
-      "id": "day-02-e03",
+      "id": "day-02-e04",
       "dayId": "day-02",
       "order": 4,
       "start": "13:15",
@@ -535,7 +535,7 @@
       "internet": true
     },
     {
-      "id": "day-03-e02",
+      "id": "day-03-e03",
       "dayId": "day-03",
       "order": 3,
       "start": "15:30",
@@ -549,7 +549,7 @@
       "internet": true
     },
     {
-      "id": "day-03-e03",
+      "id": "day-03-e04",
       "dayId": "day-03",
       "order": 4,
       "start": "17:30",
@@ -633,7 +633,7 @@
       "internet": true
     },
     {
-      "id": "day-05-e01",
+      "id": "day-05-e02",
       "dayId": "day-05",
       "order": 2,
       "start": "08:30",
@@ -647,7 +647,7 @@
       "internet": true
     },
     {
-      "id": "day-05-e02",
+      "id": "day-05-e03",
       "dayId": "day-05",
       "order": 3,
       "start": "10:00",
@@ -661,7 +661,7 @@
       "internet": true
     },
     {
-      "id": "day-05-e03",
+      "id": "day-05-e04",
       "dayId": "day-05",
       "order": 4,
       "start": "11:40",
@@ -675,7 +675,7 @@
       "internet": true
     },
     {
-      "id": "day-05-e04",
+      "id": "day-05-e05",
       "dayId": "day-05",
       "order": 5,
       "start": "13:20",
