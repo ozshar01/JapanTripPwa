@@ -3,7 +3,40 @@ const tabList=[['today','היום'],['days','כל הימים'],['bookings','הז
 function eventHTML(e){let done=!!state.done[e.id];return `<div class="event"><div class="eventtime">${esc(e.start)}${e.end?'–'+esc(e.end):''}</div><h3>${esc(e.title)}</h3><p>${esc(e.description)}</p>${e.transport?`<span class="badge">${esc(e.transport)}</span>`:''}<div class="actions">${e.mapsQuery?`<a class="btn secondary" target="_blank" href="${maps(e.mapsQuery)}">ניווט</a>`:''}<label class="check"><input type="checkbox" data-done="${e.id}" ${done?'checked':''}> בוצע</label></div></div>`}
 function dayCard(d,full=true){let ev=D.schedule.filter(x=>x.dayId===d.id).sort((a,b)=>a.order-b.order);return `<section class="hero"><div class="meta">יום ${d.day} • ${fmt(d.date)} • ${esc(d.weekday)}</div><h2>${esc(d.title)}</h2><p>${esc(d.subtitle)}</p><span class="badge">עומס: ${esc(d.load)}</span>${d.holiday?'<span class="badge holiday">חג</span>':''}</section>${full?`<section class="card"><h2>לוח הזמנים</h2><div class="timeline">${ev.map(eventHTML).join('')}</div></section><section class="card"><h2>חשוב לדעת</h2><ul class="clean">${d.important.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h2>מה לקחת</h2><ul class="clean">${d.take.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section><section class="card"><h2>מסעדות מתאימות</h2>${D.restaurants.filter(r=>r.days.includes(d.id)||r.days.includes(String(d.day))||r.days.includes('day-'+String(d.day).padStart(2,'0'))).map(foodCard).join('')||'<p>אין מסעדות משויכות ליום זה.</p>'}</section>`:''}`}
 function foodCard(r){return `<article class="card"><h3>${esc(r.name)}</h3><div class="meta">${esc(r.area)} • ${esc(r.cuisine)} • ${esc(r.price)}</div><p><strong>ללא חזיר:</strong> ${esc(r.porkStatus)}</p><p>${esc(r.recommended)}</p><p>${esc(r.notes)}</p><div class="actions"><a class="btn secondary" target="_blank" href="${maps(r.mapsQuery||r.name)}">Google Maps</a>${r.website?`<a class="btn secondary" target="_blank" href="${esc(r.website)}">אתר</a>`:''}<button class="btn ${state.favorites[r.id]?'green':'secondary'}" data-fav="${r.id}">★</button></div></article>`}
-function renderToday(){let d=currentDay();app.innerHTML=`<div class="notice">גרסת נתונים: ${esc(D.version)}. אפשר לבחור יום אחר בתצוגת כל הימים.</div>${dayCard(d,true)}`}
+function renderTodayView(dayData) {
+  const container = document.getElementById('app-content');
+  
+  let html = `
+    <div class="today-hero">
+      <img src="${dayData.heroImage || 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800'}" alt="${dayData.title}">
+      <div class="today-hero-overlay">
+        <span class="today-badge">${dayData.dateTag || 'היום'}</span>
+        <h2>${dayData.title}</h2>
+      </div>
+    </div>
+    <div class="activities-list">
+  `;
+
+  dayData.activities.forEach(act => {
+    html += `
+      <div class="activity-card">
+        <div class="card-header">
+          <h3 class="activity-title">${act.title}</h3>
+          ${act.time ? `<span class="activity-time">${act.time}</span>` : ''}
+        </div>
+        <p class="activity-desc">${act.description || ''}</p>
+        ${act.mapUrl ? `
+          <a href="${act.mapUrl}" target="_blank" class="btn-map">
+            📍 פתח במפות Google
+          </a>
+        ` : ''}
+      </div>
+    `;
+  });
+
+  html += `</div>`;
+  container.innerHTML = html;
+}
 function renderDays(){app.innerHTML=`<input class="search" id="search" placeholder="חיפוש יום, מקום או פעילות"><div id="dayList">${D.days.map(d=>`<article class="card"><div class="meta">יום ${d.day} • ${fmt(d.date)}</div><h2>${esc(d.title)}</h2><p>${esc(d.city)} • עומס ${esc(d.load)}</p><button class="btn" data-open-day="${d.id}">פתיחת היום</button></article>`).join('')}</div>`;document.querySelector('#search').oninput=e=>{let q=e.target.value.toLowerCase();document.querySelectorAll('#dayList article').forEach(x=>x.classList.toggle('hidden',!x.innerText.toLowerCase().includes(q)))}}
 function renderBookings(){let rank={קריטית:0,גבוהה:1,בינונית:2,נמוכה:3};let b=[...D.bookings].sort((a,z)=>(rank[a.priority]??9)-(rank[z.priority]??9));app.innerHTML=`<div class="filters"><button data-bfilter="all">הכול</button><button data-bfilter="open">פתוח</button><button data-bfilter="booked">הוזמן</button></div><div id="bookingList">${b.map(x=>`<article class="card" data-status="${state.booking[x.id]||x.status}"><h3>${esc(x.name)}</h3><div class="meta">${fmt(x.useDate)} • ${esc(x.time)} • ${esc(x.priority)}</div><p><strong>יעד:</strong> ${fmt(x.deadline)} | <strong>עלות:</strong> ${esc(x.cost)}</p><p>${esc(x.notes)}</p><div class="actions">${x.url?`<a class="btn secondary" target="_blank" href="${esc(x.url)}">הזמנה</a>`:''}<button class="btn" data-book="${x.id}">${(state.booking[x.id]||x.status)==='הוזמן'?'ביטול סימון':'סימון כהוזמן'}</button></div></article>`).join('')}</div>`}
 function renderFood(){app.innerHTML=`<input class="search" id="search" placeholder="חיפוש מסעדה, אזור או מטבח">${D.restaurants.map(foodCard).join('')}`;document.querySelector('#search').oninput=e=>{let q=e.target.value.toLowerCase();document.querySelectorAll('main article').forEach(x=>x.classList.toggle('hidden',!x.innerText.toLowerCase().includes(q)))}}
