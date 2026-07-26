@@ -1,4 +1,4 @@
-const CACHE = 'japan-trip-shell-v1';
+const CACHE = 'japan-trip-shell-v2';
 const DATA_FILE = 'data/trip-data.js';
 const ASSETS = [
   './',
@@ -28,6 +28,23 @@ self.addEventListener('activate', event => {
   );
 });
 
+// Network-first for everything: always try the server first so edits show up
+// immediately. Only fall back to the cached copy when offline.
+async function networkFirst(request) {
+  const cache = await caches.open(CACHE);
+  try {
+    const response = await fetch(request, { cache: 'no-store' });
+    if (response.ok) {
+      await cache.put(request, response.clone());
+    }
+    return response;
+  } catch (error) {
+    const cached = await cache.match(request);
+    if (cached) return cached;
+    throw error;
+  }
+}
+
 async function networkFirstData(request) {
   const cache = await caches.open(CACHE);
   try {
@@ -45,17 +62,6 @@ async function networkFirstData(request) {
   }
 }
 
-async function cacheFirstShell(request) {
-  const cached = await caches.match(request);
-  if (cached) return cached;
-  const response = await fetch(request);
-  if (response.ok) {
-    const cache = await caches.open(CACHE);
-    await cache.put(request, response.clone());
-  }
-  return response;
-}
-
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
 
@@ -65,5 +71,10 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  event.respondWith(cacheFirstShell(event.request));
+  event.respondWith(networkFirst(event.request));
+});
+
+// Let the page ask the waiting worker to activate immediately (see app.js).
+self.addEventListener('message', event => {
+  if (event.data === 'SKIP_WAITING') self.skipWaiting();
 });

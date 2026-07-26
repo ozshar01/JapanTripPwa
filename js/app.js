@@ -605,7 +605,36 @@
   });
 
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-    navigator.serviceWorker.register('service-worker.js');
+    navigator.serviceWorker.register('service-worker.js').then((reg) => {
+      // If a new version is already waiting (e.g. from a previous visit), activate it.
+      if (reg.waiting) reg.waiting.postMessage('SKIP_WAITING');
+
+      // When a new worker finishes installing, tell it to activate right away.
+      reg.addEventListener('updatefound', () => {
+        const newWorker = reg.installing;
+        if (!newWorker) return;
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            newWorker.postMessage('SKIP_WAITING');
+          }
+        });
+      });
+
+      // Check the server for a newer service-worker.js whenever the tab
+      // regains focus, so the app catches updates without a manual refresh.
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') reg.update();
+      });
+    });
+
+    // Once the new worker takes control, reload once so the fresh
+    // index.html/app.js/css are actually used.
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (refreshing) return;
+      refreshing = true;
+      location.reload();
+    });
   }
 
   document.querySelector('#appTitle').textContent = D.settings['שם הטיול'] || 'הטיול שלי';
