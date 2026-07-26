@@ -1,5 +1,5 @@
 window.TRIP_DATA = {
-  "version": "2026-07-26 10:21",
+  "version": "2026-07-26 19:39",
   "settings": {
     "שם הטיול": "יפן 2026",
     "תאריך התחלה": "2026-09-20",
@@ -2479,6 +2479,21 @@ window.TRIP_DATA = {
   ],
   "restaurants": [
     {
+      "id": "konbini-egg-onigiri",
+      "days": [
+        "day-01"
+      ],
+      "area": "כללי (קונביני)",
+      "name": "FamilyMart / 7-Eleven (כריך ביצים / אוניגירי)",
+      "cuisine": "אוכל מהיר / קונביני",
+      "price": "¥150–400",
+      "porkStatus": "ללא חזיר (כריכי ביצים, אוניגירי סלמון/טונה מיונז)",
+      "recommended": "כריך ביצים, אוניגירי סלמון",
+      "mapsQuery": "7-Eleven Tokyo",
+      "website": "",
+      "notes": "כריכי הביצים המפורסמים והאוניגירי הבסיסיים אינם מכילים חזיר"
+    },
+    {
       "id": "tsukiji",
       "days": [
         "day-02"
@@ -2492,6 +2507,126 @@ window.TRIP_DATA = {
       "mapsQuery": "Tsukiji Outer Market Tokyo",
       "website": "https://www.tsukiji.or.jp/english/calendar/",
       "notes": "לא לבחור לפי התור הארוך ביותר"
+    },
+    {
+      "id": "yakiniku-rokkasen",
+      "days": [
+        "day-02"
+      ],
+      "area": "שינג'וקו",
+      "name": "Yakiniku Rokkasen",
+      "cuisine": "יאקיניקו / בקר",
+      "price": "¥8,000–15,000",
+      "porkStatus": "בקר / ברביקיו עצמי (לשאול על רוטב)",
+      "recommended": "תפריט הכל כולל בקר וואגיו",
+      "mapsQuery": "Yakiniku Rokkasen Shinjuku Tokyo",
+      "website": "https://rokkasen.co.jp/",
+      "notes": "חוויית ברביקיו עצמי (יאקיניקו) עם תפריטי הכל כלול, מומלץ להזמין מקום מראש"
+    },
+    {
+      "id": "gyukatsu-motomura",
+      "days": [
+        "day-02"
+      ],
+      "area": "שינג'וקו / שיבויה",
+      "name": "Gyukatsu Motomura",
+      "cuisine": "גיוקאטסו (שניצל בקר)",
+      "price": "¥1,500–2,500",
+      "porkStatus": "בקר בלבד (ללא חזיר)",
+      "recommended": "סט שניצל בקר וואגיו לטיגון עצמי",
+      "mapsQuery": "Gyukatsu Motomura Shinjuku Tokyo",
+      "website": "",
+      "notes": "רשת פופולרית מאוד שמגישה שניצל בקר (גיוקאטסו) המטוגן קלות על אבן חמה"
+    },
+    {
+      "id": "ichiran-no-pork",
+      "days": [
+        "day-02"
+      ],
+      "area": "שינג'וקו / אסאקוסה",
+      "name": "Ichiran No Pork (Nishi-Shinjuku / Asakusa)",
+      "cuisine": "ראמן עוף/בקר",
+      "price": "¥1,200–2,000",
+      "porkStatus": "100% ללא חזיר (ציר עוף ובקר)",
+      "recommended": "100% Tonkotsu-Free Ramen",
+      "mapsQuery": "Ichiran No Pork Nishi-Shinjuku Tokyo",
+      "website": "",
+      "notes": "הגרסה הנקייה מחזיר של הרשת האייקונית, המבוססת על ציר עוף ובקר"
+    },
+    {
+      "id": "tokyo-abura-gumi",
+      "days": [
+        "day-02"
+      ],
+      "area": "שינג'וקו / שיבויה",
+      "name": "Tokyo Abura Gumi Main Store",
+      "cuisine": "אבורה סוֹבָּה (ראמן יבש)",
+      "price": "¥900–1,400",
+      "porkStatus": "לבדוק תוספות (חלק מהרטבים מכילים שומן חזיר)",
+      "recommended": "Abura Soba",
+      "mapsQuery": "Tokyo Abura Gumi Shinjuku Tokyo",
+      "website": "",
+      "notes": "ראמן ייחודי ללא מרק (נאכל עם חומץ ושמן צ'ילי)"
+    },
+    {
+      "id": "seagen-tsukiji",
+      "days": [
+        "day-02"
+      ],
+      "area": "צוקיג'י",
+      "name": "Seagen Restaurants in Tsukiji",
+      "cuisine": "סושי / קערות אורז ודגים",
+      "price": "¥2,000–5,000",
+      "porkStatus": "100% דגים ופירות ים",
+      "recommended": "Kaisen-don (קערת אורז ודגים)",
+      "mapsQuery": "Seagen Tsukiji Tokyo",
+      "website": "",
+      "notes": "מסעדת דגים וסושי בשוק צוקיג'י"
+    },
+    {
+      "id": "kura-sushiro",
+      "days": [
+        "day-02"
+      ],
+      "area": "שינג'וקו / שיבויה / כללי",
+      "name": "Kura Sushi / Sushiro",
+      "cuisine": "סושי מסוע טכנולוגי",
+      "price": "¥1,000–2,500",
+      "porkStatus": "מבוסס דגים (להיזהר ממרקים/תוספות עוף או חזיר)",
+      "recommended": "מגוון ניגירי דגים",
+      "mapsQuery": "Kura Sushi Shinjuku Tokyo",
+      "website": "",
+      "notes": "רשתות סושי מסוע טכנולוגיות וזולות מבוססות דגים"
+    },
+    {
+      "id": "tsukiji-strawberry-daifuku",
+      "days": [
+        "day-02"
+      ],
+      "area": "צוקיג'י",
+      "name": "Tsukiji Strawberry Daifuku Market Stalls",
+      "cuisine": "קינוחים / מתוקים",
+      "price": "¥400–800",
+      "porkStatus": "צמחוני / מתוק",
+      "recommended": "מוצ'י דאיפוקו תות טרי",
+      "mapsQuery": "Tsukiji Outer Market Tokyo",
+      "website": "",
+      "notes": "דוכן בשוק הדגים Tsukiji: מוצ'י דאיפוקו טרי (קינוח אורז מתוק עם תותים)"
+    },
+    {
+      "id": "musashi-no-mori-coffee",
+      "days": [
+        "day-02"
+      ],
+      "area": "שינג'וקו / טוקיו",
+      "name": "Musashi no Mori Coffee",
+      "cuisine": "בית קפה / פנקייק",
+      "price": "¥1,000–2,000",
+      "porkStatus": "חלבי / צמחוני",
+      "recommended": "פנקייק פלאפי אוורירי",
+      "mapsQuery": "Musashi no Mori Coffee Tokyo",
+      "website": "",
+      "notes": "בית קפה המגיש פנקייק פלאפי ואוורירי מדהים"
     },
     {
       "id": "umi",
@@ -2524,6 +2659,156 @@ window.TRIP_DATA = {
       "notes": "פתרון בטוח ביום החג"
     },
     {
+      "id": "kikanbo-miso-ramen",
+      "days": [
+        "day-04"
+      ],
+      "area": "איקבוקורו / קאנדה",
+      "name": "Karashibi Kikanbo Miso Ramen",
+      "cuisine": "ראמן מיסו חריף",
+      "price": "¥1,000–1,800",
+      "porkStatus": "⚠️ מכיל חזיר! (Chashu וציר חזיר)",
+      "recommended": "Kara Miso Ramen",
+      "mapsQuery": "Karashibi Kikanbo Ikebukuro Tokyo",
+      "website": "",
+      "notes": "⚠️ מכיל חזיר! (לא מומלץ לשומרי חזיר). מוגש עם נתח חזיר וציר מבוסס חזיר"
+    },
+    {
+      "id": "kaiten-sushi-toriton",
+      "days": [
+        "day-04"
+      ],
+      "area": "איקבוקורו / סקייטרי",
+      "name": "KAITEN SUSHI TORITON",
+      "cuisine": "סושי מסוע",
+      "price": "¥2,000–4,000",
+      "porkStatus": "דגים ופירות ים",
+      "recommended": "דגי הוקאידו טריים",
+      "mapsQuery": "Kaiten Sushi Toriton Ikebukuro Tokyo",
+      "website": "",
+      "notes": "סושי מסוע פופולרי ומעולה שמקורו בהוקאידו"
+    },
+    {
+      "id": "maguro-mart",
+      "days": [
+        "day-04"
+      ],
+      "area": "נאקאנו / טוקיו",
+      "name": "Maguro Mart",
+      "cuisine": "מסעדת טונה",
+      "price": "¥3,000–6,000",
+      "porkStatus": "דגי טונה ופירות ים בלבד",
+      "recommended": "מגש נתחי טונה מגוונים לצלייה/נא",
+      "mapsQuery": "Maguro Mart Nakano Tokyo",
+      "website": "",
+      "notes": "מסעדה ייחודית המוקדשת כולה לארוחות טונה יצירתיות"
+    },
+    {
+      "id": "sugamo-street-food",
+      "days": [
+        "day-04"
+      ],
+      "area": "סוגאמו (שינטוקיו)",
+      "name": "Sugamo Shopping Street",
+      "cuisine": "אוכל רחוב אתגרי",
+      "price": "¥300–800",
+      "porkStatus": "חגבים (חרקים)",
+      "recommended": "חגבים מתובלים",
+      "mapsQuery": "Sugamo Jizodori Shopping Street Tokyo",
+      "website": "",
+      "notes": "שוק Sugamo: חגבים (לחובבי האתגרים)"
+    },
+    {
+      "id": "misono-kyoto",
+      "days": [
+        "day-12"
+      ],
+      "area": "קיוטו (מרכז העיר)",
+      "name": "Misono Kyoto",
+      "cuisine": "טפניאקי / סטייק וואגיו",
+      "price": "¥10,000–25,000",
+      "porkStatus": "בקר וואגיו בלבד",
+      "recommended": "ארוחת סטייק טפניאקי שף",
+      "mapsQuery": "Misono Teppanyaki Kyoto",
+      "website": "",
+      "notes": "חוויית טפניאקי יוקרתית — שף פרטי שמכין סטייקים על פלטת ברזל עם שואו מרהיב"
+    },
+    {
+      "id": "ayam-ya-kyoto",
+      "days": [
+        "day-12"
+      ],
+      "area": "קיוטו (תחנת קיוטו / שיג'ו)",
+      "name": "Ayam-Ya Kyoto",
+      "cuisine": "ראמן חלאל",
+      "price": "¥1,000–1,600",
+      "porkStatus": "100% חלאל, ללא חזיר",
+      "recommended": "Tori Paitan Ramen / Spicy Ramen",
+      "mapsQuery": "Ayam Ya Kyoto Ramen",
+      "website": "",
+      "notes": "סניף של רשת הראמן חלאל על בסיס ציר עוף עשיר"
+    },
+    {
+      "id": "chao-chao-gyoza",
+      "days": [
+        "day-12"
+      ],
+      "area": "קיוטו (סאנג'ו / קוואראמאצ'י)",
+      "name": "Chao Chao Gyoza Kyoto",
+      "cuisine": "גיוזה (כיסונים)",
+      "price": "¥1,000–2,200",
+      "porkStatus": "⚠️ מכיל חזיר! לחפש אופציות עוף/שרימפס/צמחוני",
+      "recommended": "גיוזה עוף או גיוזה שרימפס",
+      "mapsQuery": "Chao Chao Gyoza Shijo Kawaramachi Kyoto",
+      "website": "",
+      "notes": "⚠️ מוסד הגיוזה המפורסם מגיש בעיקר גיוזות חזיר קלאסיות (חובה לבקש אופציות עוף/צמחוניות)"
+    },
+    {
+      "id": "arashiyama-chikurin-tei",
+      "days": [
+        "day-13"
+      ],
+      "area": "ארשייאמה (קיוטו)",
+      "name": "Arashiyama Chikurin-tei",
+      "cuisine": "ראמן כשר / עוף",
+      "price": "¥1,200–2,000",
+      "porkStatus": "כשר / 100% ללא חזיר (ציר עוף)",
+      "recommended": "ראמן עוף זך",
+      "mapsQuery": "Arashiyama Chikurin tei Kyoto",
+      "website": "",
+      "notes": "ראמן כשר ונקי לחלוטין מחזיר, המבוסס על ציר עוף באזור ארשייאמה"
+    },
+    {
+      "id": "misono-osaka",
+      "days": [
+        "day-14"
+      ],
+      "area": "אוסקה (אוเมדה / דוטונבורי)",
+      "name": "Misono Osaka",
+      "cuisine": "טפניאקי / סטייק וואגיו",
+      "price": "¥10,000–25,000",
+      "porkStatus": "בקר וואגיו",
+      "recommended": "ארוחת סטייק טפניאקי",
+      "mapsQuery": "Misono Teppanyaki Osaka",
+      "website": "",
+      "notes": "סניף נוסף של רשת הטפניאקי והסטייקים המציעה שואו מול העיניים"
+    },
+    {
+      "id": "pizza-pst",
+      "days": [
+        "day-16"
+      ],
+      "area": "רופונגי / היגאשי-אזאבו",
+      "name": "Pizza PST (Pizza Studio Tamaki)",
+      "cuisine": "פיצה איטלקית",
+      "price": "¥2,500–5,000",
+      "porkStatus": "לבחור פיצה מרגריטה / ללא נקניק חזיר",
+      "recommended": "Pizza Tamaki / Margherita",
+      "mapsQuery": "Pizza Studio Tamaki Higashi Azabu Tokyo",
+      "website": "",
+      "notes": "פיצה מעולה וזוכת פרסים בטוקיו"
+    },
+    {
       "id": "gyumon",
       "days": [
         "day-17"
@@ -2537,6 +2822,111 @@ window.TRIP_DATA = {
       "mapsQuery": "Gyumon Yakiniku Shibuya Tokyo",
       "website": "",
       "notes": "מומלץ להזמין"
+    },
+    {
+      "id": "han-no-daidokoro",
+      "days": [
+        "day-17"
+      ],
+      "area": "שיבויה",
+      "name": "Han no Daidokoro / Bettei",
+      "cuisine": "יאקיניקו / וואגיו קוריאני",
+      "price": "¥5,000–10,000",
+      "porkStatus": "בקר וואגיו (לבדוק רכיבי רטבים)",
+      "recommended": "נתחי וואגיו מובחרים",
+      "mapsQuery": "Han no Daidokoro Bettei Shibuya Tokyo",
+      "website": "",
+      "notes": "ואגיו קוריאני מעולה ויאקיניקו עם שירות מצוין"
+    },
+    {
+      "id": "wagyu-burger-hirokiya",
+      "days": [
+        "day-17"
+      ],
+      "area": "שיבויה / איביסו",
+      "name": "WAGYU BURGER HIROKIYA",
+      "cuisine": "המבורגר וואגיו",
+      "price": "¥2,000–4,000",
+      "porkStatus": "המבורגר בקר וואגיו",
+      "recommended": "המבורגר וואגיו קלאסי או צ'דר",
+      "mapsQuery": "WAGYU BURGER HIROKIYA Tokyo",
+      "website": "",
+      "notes": "המבורגרים מנתחי וואגיו איכותיים"
+    },
+    {
+      "id": "yoroniku",
+      "days": [
+        "day-17"
+      ],
+      "area": "אאויאמה / מינאטו",
+      "name": "Yoroniku",
+      "cuisine": "יאקיניקו אומקסה",
+      "price": "¥12,000–20,000",
+      "porkStatus": "בקר וואגיו בלבד",
+      "recommended": "תפריט אומקסה וואגיו",
+      "mapsQuery": "Yoroniku Aoyama Tokyo",
+      "website": "",
+      "notes": "ארוחת אומקסה (תפריט שף) המוקדשת כולה לוואגיו"
+    },
+    {
+      "id": "shodai-ebisu",
+      "days": [
+        "day-17"
+      ],
+      "area": "איביסו / שיבויה",
+      "name": "Shodai",
+      "cuisine": "קארי אודון",
+      "price": "¥1,200–2,000",
+      "porkStatus": "לשאול על ציר המרק (אודון קארי)",
+      "recommended": "Curry Udon עם קציפת תפוחי אדמה",
+      "mapsQuery": "Shodai Ebisu Tokyo",
+      "website": "",
+      "notes": "קארי אודון ייחודי המוגש עם קציפת תפוחי אדמה מוקצפת מעל"
+    },
+    {
+      "id": "afuri-ramen",
+      "days": [
+        "day-17"
+      ],
+      "area": "הרבוקו / שיבויה / איביסו",
+      "name": "Afuri Ramen",
+      "cuisine": "ראמן יוג'ו/עוף",
+      "price": "¥1,100–1,800",
+      "porkStatus": "אופציית ציר עוף עדין / אופציה טבעונית",
+      "recommended": "Yuzu Shio Ramen / Vegan Ramen",
+      "mapsQuery": "Afuri Harajuku Tokyo",
+      "website": "https://afuri.com/",
+      "notes": "רשת ראמן פופולרית (כוללת ציר עוף עדין עם יוזו, וגם אופציה טבעונית מלאה)"
+    },
+    {
+      "id": "uogashi-nihon-ichi",
+      "days": [
+        "day-17"
+      ],
+      "area": "שיבויה Dogenzaka",
+      "name": "Uogashi Nihon-Ichi (Shibuya Dogenzaka)",
+      "cuisine": "סושי בעמידה",
+      "price": "¥1,500–3,000",
+      "porkStatus": "דגים טריים בלבד",
+      "recommended": "ניגירי סלמון, טונה וניגירי צרוב",
+      "mapsQuery": "Uogashi Nihon-Ichi Shibuya Dogenzaka Tokyo",
+      "website": "",
+      "notes": "חוויה מקומית מהירה וטעימה של סושי בעמידה"
+    },
+    {
+      "id": "udatsu-sushi",
+      "days": [
+        "day-17"
+      ],
+      "area": "נאקאמגורו",
+      "name": "Udatsu Sushi",
+      "cuisine": "סושי אומקסה",
+      "price": "¥25,000–40,000",
+      "porkStatus": "דגים",
+      "recommended": "אומקסה",
+      "mapsQuery": "Udatsu Sushi Nakameguro Tokyo",
+      "website": "",
+      "notes": "⚠️ לא מומלץ! (הערת המדריך: יקר מדי ולא מומלץ ללכת)"
     },
     {
       "id": "naritaya",
@@ -2567,6 +2957,186 @@ window.TRIP_DATA = {
       "mapsQuery": "Bangera’s Kitchen Ginza",
       "website": "https://www.bangeras-kitchen.com/bgk/",
       "notes": "מסעדה רצינית ולא מלכודת תיירים"
+    },
+    {
+      "id": "jambo-hanare",
+      "days": [
+        "day-18"
+      ],
+      "area": "הונגו / טוקיו",
+      "name": "Yakiniku Jambo Hanare",
+      "cuisine": "יאקיניקו וואגיו",
+      "price": "¥10,000–20,000",
+      "porkStatus": "בקר בלבד",
+      "recommended": "ארוחת וואגיו משובחת (Nohara Yaki)",
+      "mapsQuery": "Yakiniku Jambo Hanare Tokyo",
+      "website": "",
+      "notes": "ארוחת וואגיו משובחת ברמה גבוהה מאוד"
+    },
+    {
+      "id": "ginza-steak-honten",
+      "days": [
+        "day-18"
+      ],
+      "area": "גינזה",
+      "name": "Ginza Steak Honten",
+      "cuisine": "סטייק וואגיו",
+      "price": "¥7,000–12,000",
+      "porkStatus": "בקר וואגיו",
+      "recommended": "תפריט אכול כפי יכולתך וואגיו",
+      "mapsQuery": "Ginza Steak Honten Tokyo",
+      "website": "",
+      "notes": "חוויית וואגיו בסגנון אכול כפי יכולתך"
+    },
+    {
+      "id": "coco-nemaru-ginza",
+      "days": [
+        "day-18"
+      ],
+      "area": "גינזה",
+      "name": "Coco Nemaru Ginza",
+      "cuisine": "סטייק וואגיו",
+      "price": "¥6,000–12,000",
+      "porkStatus": "בקר וואגיו",
+      "recommended": "סטייק וואגיו איכותי",
+      "mapsQuery": "Coco Nemaru Ginza Tokyo",
+      "website": "",
+      "notes": "סטייק וואגיו איכותי במרכז גינזה"
+    },
+    {
+      "id": "rare-tendon-mitsuyoshi",
+      "days": [
+        "day-18"
+      ],
+      "area": "גינזה",
+      "name": "Rare Tendon Ginza Mitsuyoshi",
+      "cuisine": "טנדון / וואגיו ודגים",
+      "price": "¥2,500–5,000",
+      "porkStatus": "קערות אורז עם וואגיו או דגים",
+      "recommended": "טמפורה וואגיו נדירה",
+      "mapsQuery": "Rare Tendon Ginza Mitsuyoshi Tokyo",
+      "website": "",
+      "notes": "קערות אורז עם טמפורה של וואגיו או דגים בגינזה"
+    },
+    {
+      "id": "asakusa-menchi",
+      "days": [
+        "day-18"
+      ],
+      "area": "אסאקוסה",
+      "name": "Asakusa Menchi",
+      "cuisine": "אוכל רחוב / קרוקט",
+      "price": "¥300–500",
+      "porkStatus": "⚠️ מכיל חזיר! (תערובת בקר קובי וחזיר)",
+      "recommended": "קרוקט מנצ'י",
+      "mapsQuery": "Asakusa Menchi Tokyo",
+      "website": "",
+      "notes": "⚠️ מכיל חזיר! (לא מומלץ לשומרי חזיר). הקרוקט מכיל תערובת בקר וחזיר"
+    },
+    {
+      "id": "ayam-ya-tokyo",
+      "days": [
+        "day-18"
+      ],
+      "area": "אואנו / אסאקוסה",
+      "name": "Ayam-Ya Okachimachi",
+      "cuisine": "ראמן חלאל",
+      "price": "¥1,000–1,500",
+      "porkStatus": "חלאל מוסמך, ללא חזיר",
+      "recommended": "Tori Paitan Ramen",
+      "mapsQuery": "Ayam Ya Okachimachi Tokyo",
+      "website": "",
+      "notes": "ראמן על בסיס ציר עוף סמיך ועשיר (Tori Paitan) עם תעודת חלאל"
+    },
+    {
+      "id": "men-mtsui",
+      "days": [
+        "day-18"
+      ],
+      "area": "אסאקוסה",
+      "name": "men mtsui",
+      "cuisine": "ראמן סויה",
+      "price": "¥1,000–1,500",
+      "porkStatus": "ראמן סויה (לבדוק רכיבי ציר)",
+      "recommended": "Shoyu Ramen",
+      "mapsQuery": "men mtsui Asakusa Tokyo",
+      "website": "",
+      "notes": "מנת ראמן איכותית על בסיס סויה"
+    },
+    {
+      "id": "kaiten-sushi-ginza-onodera",
+      "days": [
+        "day-18"
+      ],
+      "area": "גינזה / אומטסנדו",
+      "name": "Kaiten Sushi Ginza Onodera",
+      "cuisine": "סושי מסוע פרימיום",
+      "price": "¥3,000–7,000",
+      "porkStatus": "מבוסס דגים מוסמך",
+      "recommended": "טונה טרייה, סלמון, אוני",
+      "mapsQuery": "Kaiten Sushi Ginza Onodera Tokyo",
+      "website": "",
+      "notes": "חוויית סושי מסוע איכותית ברמת פרימיום בגינזה"
+    },
+    {
+      "id": "hakkoku-sushi",
+      "days": [
+        "day-18"
+      ],
+      "area": "גינזה",
+      "name": "Hakkoku",
+      "cuisine": "סושי אומקסה",
+      "price": "¥15,000–30,000",
+      "porkStatus": "דגים ופירות ים",
+      "recommended": "ארוחת אומקסה שף",
+      "mapsQuery": "Hakkoku Ginza Tokyo",
+      "website": "",
+      "notes": "סושי אומקסה (ארוחת שף) ברמה גבוהה מאוד"
+    },
+    {
+      "id": "sushi-kenshin",
+      "days": [
+        "day-18"
+      ],
+      "area": "גינזה",
+      "name": "Sushi Kenshin",
+      "cuisine": "סושי אומקסה מסורתי",
+      "price": "¥12,000–25,000",
+      "porkStatus": "דגים ופירות ים",
+      "recommended": "תפריט אומקסה מסורתי",
+      "mapsQuery": "Sushi Kenshin Ginza Tokyo",
+      "website": "",
+      "notes": "חוויית סושי אומקסה מסורתית ויוקרתית"
+    },
+    {
+      "id": "age-3-fried-sandwich",
+      "days": [
+        "day-18"
+      ],
+      "area": "גינזה",
+      "name": "Age 3 Ginza",
+      "cuisine": "כריך מטוגן",
+      "price": "¥500–1,000",
+      "porkStatus": "מגוון מילויים",
+      "recommended": "כריך מטוגן",
+      "mapsQuery": "Age 3 Ginza Tokyo",
+      "website": "",
+      "notes": "⚠️ לא מומלץ! (הערת המדריך: לא מומלץ בכלל)"
+    },
+    {
+      "id": "aramaki-yakitori",
+      "days": [
+        "day-18"
+      ],
+      "area": "גינזה / אסאקוסה",
+      "name": "Aramaki Yakitori",
+      "cuisine": "יקיטורי (שיפודי עוף)",
+      "price": "¥4,000–8,000",
+      "porkStatus": "שיפודי עוף (ללא חזיר)",
+      "recommended": "סט שיפודי עוף מובחרים",
+      "mapsQuery": "Aramaki Yakitori Tokyo",
+      "website": "",
+      "notes": "שיפודי יקיטורי (עוף) מומלצי מדריך מישלן"
     }
   ],
   "hotels": [
